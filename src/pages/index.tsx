@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Navbar } from '../components/Navbar/Navbar';
+import { Navbar } from '@modules/navbar/components/Navbar';
 
 type TechnologyCardProps = {
   name: string;

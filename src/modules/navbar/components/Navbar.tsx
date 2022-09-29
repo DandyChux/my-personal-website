@@ -1,22 +1,19 @@
 import * as React from 'react';
 import Link from 'next/link';
-import * as data from './links.json';
+import { navItem } from '../NavItem';
 import Image from 'next/image';
-import Logo from '../../../public/logo.png';
-
-const linksString = JSON.stringify(data);
-const links = JSON.parse(linksString).links;
+import Logo from '@public/logo.png';
+// import { IconType } from 'react-icons';
+import { FaHome, FaUser } from 'react-icons/fa';
 
 type NavLink = {
     label: string;
     path: string;
+    icon: JSX.Element;
 }
 
-// const NavLink = ({ links }) => (
-//     <div className="">
-//         {links.map}
-//     </div>
-// )
+const linksString = JSON.stringify(navItem);
+const links = JSON.parse(linksString);
 
 export const Navbar = () => (
     <nav className="relative h-full md:h-screen md:w-32 flex flex-col bg-gray-900">
@@ -29,9 +26,11 @@ export const Navbar = () => (
         </div>
         <div className="">
             {links.map((link: NavLink) => (
-                <div key={link.path} className="w-min text-center no-underline">
+                <div key={link.label} className="w-min text-center no-underline">
                     <Link href={link.path}>
-                        <a>{link.label}</a>
+                        <a>
+                            {link.icon}
+                        </a>
                     </Link>
                 </div>
             ))}
