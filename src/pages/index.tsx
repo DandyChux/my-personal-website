@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Navbar/>
+      <Navbar navActive = {navActive} setNavActive = {setNavActive}/>
 
       <main className="container mx-auto flex flex-col items-center justify-center h-screen p-4">
         <h1 className="text-5xl md:text-[5rem] leading-normal font-extrabold text-gray-700">

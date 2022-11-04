@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": { /* For absolute imports */
       "@modules/*": ["src/modules/*"],
       "@pages/*": ["src/pages/*"],
       "@server/*": ["src/server/*"],
       "@public/*": ["public/*"],
+      "@styles/*": ["src/styles/*"]
     },
     "skipLibCheck": true,
     "strict": true,
