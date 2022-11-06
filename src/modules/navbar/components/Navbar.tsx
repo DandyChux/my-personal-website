@@ -15,11 +15,10 @@ interface INavbar {
 // const linksString = JSON.stringify(navItem);
 // const links = JSON.parse(linksString);
 
-a
 export const Navbar: React.FC<INavbar> = ({ navActive, setNavActive }) => {
     const [activeIdx, setActiveIdx] = useState(-1);
     
-    const Menu_Links: { text:string; href:string; icon:IconType }[] = [
+    const menu_links: { text:string; href:string; icon:IconType }[] = [
         { text: "Home", href: "/", icon: FaHome },
         { text: "About Me", href: "/about", icon: FaUser },
         { text: "Blog", href: "/blog", icon: BsChatSquareText },
@@ -31,7 +30,19 @@ export const Navbar: React.FC<INavbar> = ({ navActive, setNavActive }) => {
             <div className="absolute top-0 mt-2.5"> 
                 <Image src={Logo} alt="My logo" />
             </div>
-            {}
+            <div className={`${navActive ? "active" : ""} `}>
+                {menu_links.map((link, idx) => (
+                    <div 
+                        onClick={() => {
+                            setActiveIdx(idx);
+                            setNavActive(false);
+                        }}
+                        key = {link.text}
+                    >
+                        <NavItem active={activeIdx === idx} {...link} />
+                    </div>
+                ))}
+            </div>
         </nav>
     )
 }

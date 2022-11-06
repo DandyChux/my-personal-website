@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Navbar } from '@modules/navbar/components/Navbar';
+import { useState } from "react";
 
 type TechnologyCardProps = {
   name: string;
@@ -9,6 +10,8 @@ type TechnologyCardProps = {
 };
 
 const Home: NextPage = () => {
+  const [navActive, setNavActive] = useState(false);
+  
   return (
     <>
       <Head>
