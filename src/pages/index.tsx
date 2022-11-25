@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Navbar } from '@modules/navbar/components/Navbar';
-import { Navbar } from "../modules/navbar/components/Navbar"
 import React, { useState } from "react";
 
 type TechnologyCardProps = {
