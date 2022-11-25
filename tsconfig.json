@@ -3,13 +3,10 @@
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "baseUrl": "./",
-    "paths": { /* For absolute imports */
-      "@modules/*": ["src/modules/*"],
-      "@pages/*": ["src/pages/*"],
-      "@server/*": ["src/server/*"],
-      "@public/*": ["public/*"],
-      "@styles/*": ["src/styles/*"]
+    "baseUrl": ".",
+    "paths": {
+      "@*": [ "./src/*" ],
+      "@public/*": [ "./public/*" ] 
     },
     "skipLibCheck": true,
     "strict": true,

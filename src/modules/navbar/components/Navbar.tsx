@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@public/logo.png';
@@ -26,7 +27,7 @@ export const Navbar: React.FC<INavbar> = ({ navActive, setNavActive }) => {
     ];
 
     return (
-        <nav className="relative h-full md:h-screen md:w-32 flex flex-col bg-gray-900">
+        <nav className="relative h-full md:h-screen md:w-32 flex flex-col justify-center bg-gray-900">
             <div className="absolute top-0 mt-2.5"> 
                 <Image src={Logo} alt="My logo" />
             </div>
