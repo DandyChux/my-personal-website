@@ -11,7 +11,7 @@ const Contact: NextPage = () => {
             </Head>
 
             <main className="container flex flex-col mx-auto h-screen">
-                <h1 className="text-3xl md:text-[5rem] leading-normal font-extrabold text-gray-900">
+                <h1 className="text-2xl md:text-[5rem] leading-normal font-extrabold text-gray-900">
                     Contact Me
                 </h1>
             </main>

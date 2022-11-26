@@ -11,7 +11,7 @@ const Blog: NextPage = () => {
             </Head>
 
             <main className="container flex flex-col mx-auto h-screen">
-                <h1 className="text-3xl md:text-[5rem] leading-normal font-extrabold text-gray-900">
+                <h1 className="text-2xl md:text-[5rem] leading-normal font-extrabold text-gray-900">
                     Blog
                 </h1>
             </main>

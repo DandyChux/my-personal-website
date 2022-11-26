@@ -1,16 +1,13 @@
+import * as React from 'react';
+import Image from 'next/image';
 
-
-type ProjectCardProps = {
+interface ProjectCardProps {
     name: string;
     description: string;
     documentation: string;
 };
 
-const ProjectCard = ({
-    name,
-    description,
-    documentation,
-}: ProjectCardProps) => {
+const ProjectCard = ({ name, description, documentation }: ProjectCardProps) => {
     return (
         <section className="flex flex-col justify-center p-6 duration-500 border-2 border-gray-500 rounded shadow-xl motion-safe:hover:scale-105">
             <h2 className="text-lg text-gray-700">{name}</h2>

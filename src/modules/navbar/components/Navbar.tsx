@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Logo from '@public/logo.png';
-import { INavItem, NavItem } from './NavItem';
+import { NavItem } from './NavItem';
 import { IconType } from 'react-icons/lib';
-import { FaHome, FaUser } from 'react-icons/fa';
-import { BsMailbox, BsChatSquareText } from 'react-icons/bs';
+import { BsMailbox, BsPerson, BsChatSquareText } from 'react-icons/bs';
+import { RiHome3Line } from 'react-icons/ri';
 
 export const Navbar: React.FC = () => {
     const menu_links: { text:string; href:string; icon:IconType }[] = [
-        { text: "Home", href: "/", icon: FaHome },
-        { text: "About Me", href: "/about", icon: FaUser },
+        { text: "Home", href: "/", icon: RiHome3Line },
+        { text: "About Me", href: "/about", icon: BsPerson },
         { text: "Blog", href: "/blog", icon: BsChatSquareText },
         { text: "Contact", href: "/contact", icon: BsMailbox }
     ];
